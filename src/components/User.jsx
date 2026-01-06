@@ -68,7 +68,7 @@ function User() {
       const token = getAuthToken();
       if (!token) return;
       
-      const response = await fetch(`http://localhost:5001/api/users/registered?page=${page}&limit=${usersPerPage}`, {
+      const response = await fetch(`https://backend-besafe.onrender.com/api/users/registered?page=${page}&limit=${usersPerPage}`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -110,7 +110,7 @@ function User() {
       const token = getAuthToken();
       if (!token) return;
       
-      const response = await fetch(`http://localhost:5001/api/users/${userId}`, {
+      const response = await fetch(`https://backend-besafe.onrender.com/api/users/${userId}`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -182,7 +182,7 @@ function User() {
       const token = getAuthToken();
       if (!token) return;
       
-      const response = await fetch(`http://localhost:5001/api/users/${selectedUser._id}`, {
+      const response = await fetch(`https://backend-besafe.onrender.com/api/users/${selectedUser._id}`, {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -223,7 +223,7 @@ function User() {
       const token = getAuthToken();
       if (!token) return;
       
-      const response = await fetch(`http://localhost:5001/api/users/${selectedUser._id}`, {
+      const response = await fetch(`https://backend-besafe.onrender.com/api/users/${selectedUser._id}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -362,7 +362,7 @@ function User() {
                   <div className="user-detail-header">
                     <div className="user-avatar-large">
                       {selectedUser.profilePicture ? (
-                        <img src={`http://localhost:5001${selectedUser.profilePicture}`} alt={selectedUser.name} />
+                        <img src={`https://backend-besafe.onrender.com${selectedUser.profilePicture}`} alt={selectedUser.name} />
                       ) : (
                         <div className="avatar-placeholder-large">
                           {selectedUser.name ? selectedUser.name.charAt(0).toUpperCase() : 'U'}
@@ -573,7 +573,7 @@ function User() {
                               <td className="user-name">
                                 <div className="user-avatar">
                                   {user.profilePicture ? (
-                                    <img src={`http://localhost:5001${user.profilePicture}`} alt={user.name} />
+                                    <img src={`https://backend-besafe.onrender.com${user.profilePicture}`} alt={user.name} />
                                   ) : (
                                     <div className="avatar-placeholder">
                                       {user.name ? user.name.charAt(0).toUpperCase() : 'U'}

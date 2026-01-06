@@ -13,7 +13,7 @@ function RegisterPage() {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5001/api/admin/register", { username, email, password, role });
+      await axios.post("https://backend-besafe.onrender.com/api/admin/register", { username, email, password, role });
       navigate("/"); // Go to login after register
     } catch (err) {
       setError(err.response?.data?.error || "Registration failed");
@@ -45,5 +45,3 @@ function RegisterPage() {
 }
 
 export default RegisterPage;
-
-

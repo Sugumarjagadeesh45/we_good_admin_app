@@ -533,9 +533,9 @@ function Orders() {
   const updateOrder = async (updatedOrder) => {
     try {
       console.log(`🔄 Updating order ${updatedOrder._id}`);
-      
+
       const response = await axios.put(
-        `${baseURL}/api/orders/admin/order/update-by-id/${updatedOrder._id}`,
+        `${baseURL}/api/orders/admin/update/${updatedOrder._id}`,
         {
           status: updatedOrder.status,
           paymentMethod: updatedOrder.paymentMethod
@@ -5387,6 +5387,3 @@ export default Orders;
 // };
 
 // export default Orders;
-
-
-

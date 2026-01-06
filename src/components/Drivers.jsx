@@ -116,7 +116,7 @@ function Drivers() {
     if (!token) return;
 
     // ✅ USE THE DIRECT ENDPOINT
-    const response = await fetch(`http://localhost:5001/api/admin/drivers`, {
+    const response = await fetch(`https://backend-besafe.onrender.com/api/admin/drivers`, {
       method: 'GET',
       headers: {
         'Authorization': `Bearer ${token}`,
@@ -174,7 +174,7 @@ function Drivers() {
     if (!token) return;
 
     // ✅ USE THE DIRECT ENDPOINT
-    const response = await fetch(`http://localhost:5001/api/admin/driver/${id}/toggle`, {
+    const response = await fetch(`https://backend-besafe.onrender.com/api/admin/driver/${id}/toggle`, {
       method: 'PUT',
       headers: { 
         'Authorization': `Bearer ${token}`,
@@ -380,7 +380,7 @@ function Drivers() {
     console.log('📤 Sending JSON data:', driverData);
     console.log('🚗 Vehicle type:', vehicleType);
     
-    const response = await fetch('http://localhost:5001/api/drivers/create-simple', {
+    const response = await fetch('https://backend-besafe.onrender.com/api/drivers/create-simple', {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${token}`,
@@ -454,7 +454,7 @@ const updateDriverWallet = async (driverId, amount) => {
     console.log(`💰 Sending wallet update for driver: ${driverId} with amount: ${numericAmount}`);
 
     // ✅ USE THE DIRECT ENDPOINT
-    const response = await fetch(`http://localhost:5001/api/admin/direct-wallet/${driverId}`, {
+    const response = await fetch(`https://backend-besafe.onrender.com/api/admin/direct-wallet/${driverId}`, {
       method: 'PUT',
       headers: {
         'Authorization': `Bearer ${token}`,

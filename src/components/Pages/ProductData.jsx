@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FiPackage, FiSearch, FiEdit, FiTrash2, FiPlus, FiFilter, FiTag, FiChevronDown } from 'react-icons/fi';
 import axios from 'axios';
 
-const API_BASE = 'http://localhost:5001/api';
+const API_BASE = 'https://backend-besafe.onrender.com/api';
 
 // Top 10 e-commerce categories
 const ECOMMERCE_CATEGORIES = [
@@ -394,7 +394,7 @@ const getImageUrl = (imagePath) => {
   }
   
   // Use the correct backend URL
-  const fullUrl = `http://localhost:5001${cleanPath}`;
+  const fullUrl = `https://backend-besafe.onrender.com${cleanPath}`;
   console.log('🖼️ Final image URL:', fullUrl);
   
   return fullUrl;

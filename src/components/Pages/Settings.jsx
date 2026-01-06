@@ -19,7 +19,7 @@ function Settings() {
 
   const fetchCurrentPrices = async () => {
     try {
-      const response = await axios.get("http://localhost:5001/api/admin/ride-prices");
+      const response = await axios.get("https://backend-besafe.onrender.com/api/admin/ride-prices");
       if (response.data.success) {
         setPrices(response.data.prices);
       }
@@ -44,7 +44,7 @@ function Settings() {
     setMessage("");
     setError("");
     try {
-      const response = await axios.post("https://dummbackend-1extraaaaa.onrender.com/api/admin/ride-prices", {
+      const response = await axios.post("https://backend-besafe.onrender.com/api/admin/ride-prices", {
         prices: prices
       });
 

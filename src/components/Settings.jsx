@@ -195,7 +195,7 @@ function Settings() {
   const fetchCurrentPrices = async () => {
     try {
       console.log('🔄 Fetching current prices from backend...');
-      const response = await axios.get("http://localhost:5001/api/admin/ride-prices");
+      const response = await axios.get("https://backend-besafe.onrender.com/api/admin/ride-prices");
       console.log('💰 Prices response:', response.data);
       
       if (response.data.success) {
@@ -229,7 +229,7 @@ function Settings() {
     try {
       console.log('💾 Saving prices:', prices);
       const response = await axios.post(
-        "http://localhost:5001/api/admin/ride-prices", 
+        "https://backend-besafe.onrender.com/api/admin/ride-prices", 
         { prices: prices },
         {
           headers: {
