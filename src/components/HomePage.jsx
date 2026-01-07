@@ -10,6 +10,7 @@ import {
   FiActivity, FiTrendingUp, FiMapPin, FiShoppingBag, FiRefreshCw
 } from 'react-icons/fi';
 
+
 function HomePage() {
   const navigate = useNavigate();
   const location = useLocation();
