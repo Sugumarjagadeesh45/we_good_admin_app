@@ -11,6 +11,7 @@ import {
 } from 'react-icons/fi';
 
 
+
 function HomePage() {
   const navigate = useNavigate();
   const location = useLocation();
